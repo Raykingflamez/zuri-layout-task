@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #1A1C28;
+        }
+
+        header{
+        height: 10vh;
+        text-align: center;
+        background-color: floralwhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        header span a{
+        text-decoration: none;
+        color: hsl(184, 100%, 22%);
+        }
+
+        header span a:hover{
+        text-decoration: underline;
+        color: hsl(179, 100%, 13%);
+        }
+
+        main{
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        main .container{
+            display: grid;
+            grid-template-areas: 
+            'a a a b b'
+            'a a a b b'
+            'c c d d d'
+            'c c e e e'
+            ;
+            gap: 10px;
+            width: 40%;
+            height: 65%;
+        }
+
+        main .container .item-1{
+            grid-area: a;
+            background-color: #EB5020;
+            padding: 3em;
+        }
+
+        main .container .item-2{
+            grid-area: b;
+            background-color: #FFA401;
+            padding: 3em 1em;
+        }
+
+        main .container .item-3{
+            grid-area: c;
+            background-color: #05AA42;
+            padding: 2em;
+        }
+
+        main .container .item-4{
+            grid-area: d;
+            background-color: #01AEFD;
+            padding: 1em 2em;
+        }
+
+        main .container .item-5{
+            grid-area: e;
+            background-color: #01AEFD;
+            padding: 2em;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <span><a href="./index.html">Flexbox Layout</a></span>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="item-1"></div>
+            <div class="item-2"></div>
+            <div class="item-3"></div>
+            <div class="item-4"></div>
+            <div class="item-5"></div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
